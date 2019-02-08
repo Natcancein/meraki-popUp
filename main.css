@@ -1,0 +1,937 @@
+*, *:before, *:after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 100%;-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+form { margin: 0; }
+label { cursor: pointer; }
+/*button, input {
+  -webkit-appearance:none;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+  line-height: normal;
+  *overflow: visible;
+}*/
+/*button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+*/
+a, a:visited, a:active { color:gray; text-decoration: underline;}
+
+.hidden { display: none; }
+
+body {
+  margin: 0;
+  background: #FFF;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.4em;
+}
+
+h1, h2,  h3, p, a, label, input {
+  font-family: 'Lato', helvetica, helvetica neue, verdana, tahoma, sans-serif;
+}
+
+
+
+h1 {
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 35px;
+  color: #555;
+  margin: 0 0 1em;
+}
+h2 {
+  font-size: 14px;
+  font-weight: normal;
+}
+h3 {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #888;
+}
+p{
+  color: #555;
+}
+
+.link_in_text a { color: #555 }
+
+.header {
+  border-bottom: 1px solid #ddd;
+  padding: 1.2em 0;
+  margin: 0;
+}
+
+.header table { width: 100%; }
+#title_cell { vertical-align: bottom; }
+#icon_cell { text-align: center; }
+#icon_cell img {
+  max-width:150px;
+  max-height: 100px;
+}
+
+#container {
+  max-width: 900px;
+  min-width: 300px;
+  margin: 0 auto;
+  background: #fff;
+  text-align: center;
+}
+
+
+
+#content {
+  background: #fff;
+  width: 100%;
+}
+
+#continue {
+  padding: 2em;
+}
+
+#blocked {
+  padding: 2em;
+}
+
+#auth {
+  box-sizing: border-box;
+  padding: 0 1.5em 2em;
+}
+
+#left_col {
+  width: 100%;
+  margin-bottom: 3em;
+  text-align: left;
+}
+
+#right_col {
+  width: 100%;
+  text-align: left;
+  margin-top: 4em;
+  margin: 0 auto;
+}
+
+#account a {
+  color: #1795E6;
+  margin-right:  1em;
+  padding-right: 1em;
+  border-right: 1px solid #ccc;
+}
+
+#account a:hover {
+  color: #0876BD;
+}
+
+#account a:last-child {
+  border: none;
+}
+
+#sign_in {
+  background: $MERAKI:CONTENT1_BACKGROUND_COLOR$;
+  color: $MERAKI:CONTENT1_TEXT_COLOR$;
+  border-radius: 2px;
+  margin: 2.5em 0 1em;
+  padding: 1em;
+  box-sizing: border-box;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+#sign_in:hover {
+  opacity: .85;
+}
+
+#blocked_msg {
+  text-align: center;
+  padding: 15px 0;
+}
+
+#claim_ap_msg {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.formarea h3 {
+  line-height: 0;
+}
+
+.formarea input {
+  background: #eee;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: .7em;
+  width: 100%;
+}
+
+#email_field {
+  margin-bottom: 1.5em;
+}
+
+.button {
+  color: $MERAKI:CONTENT1_TEXT_COLOR$;
+  background: $MERAKI:CONTENT1_BACKGROUND_COLOR$;
+  padding: 1em 2em;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 1em 0;
+}
+
+.button:hover {
+  opacity: .85;
+}
+
+#forgot_password, .form_links:not(.hidden) {
+  display: inline;
+}
+
+#signin_form .form_links {
+  float: right;
+}
+
+#forgot_password a,
+.form_links a {
+  font-size:  12px;
+  color: #1795E6;
+}
+
+#forgot_password a:hover,
+.form_links a:hover {
+  color: #0876BD;
+}
+
+#create_account_form h3 {
+  margin-top: 3em;
+}
+
+.footer {
+  width: 100%;
+  background: #eee;
+  border-top: 1px solid #ddd;
+  padding: 2em 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.footer p {
+  text-transform: uppercase;
+  color: #bdbcbc;
+  font-size: 7px;
+
+}
+
+
+.footer img {
+  margin: .5em 0;
+}
+
+.meraki_go_footer {
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  padding: 2em 0;
+  text-align: center;
+  display: inline-block;
+}
+
+.meraki_go_footer img {
+  margin: .5em 0;
+}
+
+.error {
+  background: #eee;
+  border-radius: 2px;
+  border: 1px solid #ddd;
+  margin: 3em 3em 0;
+  box-sizing: border-box;
+  padding: 0 .5em;
+}
+
+.error p {
+  color: #999;
+  font-size: 12px;
+}
+
+.login-error {
+  background: #ffdddd;
+  border-radius: 2px;
+  border: 1px solid #ffb8b8;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.login-error p {
+  color: #ff5959;
+  font-size: 12px;
+}
+
+.login-error img {
+  width: 11px;
+  margin: 5px 7px 0 0;
+}
+
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+.formarea input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 0px red; -webkit-box-shadow: 0px 0px 0px red; box-shadow: 0px 0px 0px red; }
+.formarea label.invalid {border: none; color: red; min-height: inherit; padding: 5px 0 0; margin: 0;}
+
+
+/*Nuevo CSS Promo*/
+
+
+#container-promo {
+  max-width: 900px;
+  min-width: 300px;
+  margin: 0 auto;
+  background: #0D8BBF;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#container-promo_alt2 {
+  max-width: 900px;
+  min-width: 300px;
+  margin: 0;
+  text-align: center;
+
+}
+
+#container-promo_alt2 img{
+ max-width: 100%;
+  height: auto;
+  margin-top: -10px;
+
+}
+
+#container-promo h1{
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  font-size: 30px;
+  width: 80%;
+  margin: auto;
+  letter-spacing: 3px;
+}
+
+#container-promo .lineas{
+  border-top: 3px solid white;
+  width: 81%;
+  margin: auto;
+  margin-top: 20px;
+  height: 20px;
+}
+
+
+#container-promo .lineas-arriba2{
+  border-top: 3px solid white;
+  width: 81%;
+  margin: auto;
+  margin-top: 20px;
+  height: 20px;
+}
+
+#container-promo .lineas-arriba2 img{
+position: relative;
+top:-20px;
+margin:auto;
+}
+
+
+#container-lentes {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+#container-texto {
+
+  min-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+#container-texto h1{
+  font-weight: 700;
+  color: #cf142b;
+  font-size: 30px;
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  line-height: 70px;
+}
+
+.escondido{
+  visibility: hidden;
+}
+
+/*Formulario*/
+
+#container-form{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 50px;
+  margin-bottom: 40px;
+
+}
+
+input:not(.especial) {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #cf142b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+.col-izq {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-der {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+.fila-boton{
+  margin-top: 4%;
+  margin-bottom: 4%;
+  padding-bottom: 10px;
+}
+/* borrar los floats despues de las columnas izq y der */
+.fila-formulario:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Pagina Error
+*/
+#container-error {
+  max-width: 900px;
+  min-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#container-error img {
+  width: 100px;
+}
+
+.condiciones{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 10px;
+
+}
+
+/* Layout responsivo para formulario */
+@media screen and (max-width: 600px) {
+  .col-izq, .col-der, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* Layout responsivo para comportamiento general */
+@media (width: 320px){
+
+#container {
+  background: #fff;
+  width: 100%;
+}
+
+  #container-texto h1{
+  line-height: 40px;
+}
+
+  #auth {
+    padding: 3em 3em 5em;
+  }
+  #left_col {
+    text-align: center;
+  }
+
+   #left_col_promo {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/promo-arriba.jpg?path_only=false");  
+    background-repeat:no-repeat; 
+    background-position: center;
+    background-color: #ffc600;
+    background-size:100% 80%;
+    -webkit-background-size:100% 80%;
+    -moz-background-size:100% 80%;
+    -o-background-size:100% 80%;
+    height: 250px;
+  }
+
+
+  #right_col_promo {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/promo-abajo.jpg?path_only=false");  
+    background-repeat:no-repeat; 
+    background-position: center;
+    background-color: #cf142b;
+     background-size:100% 80%;
+    -webkit-background-size:100% 80%;
+    -moz-background-size:100% 80%;
+    -o-background-size:100% 80%;
+    height: 250px;
+  }
+
+
+  #container-lentes .lente-izq {
+  margin: auto;
+  text-align: center;
+  background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/lente-1.jpg?path_only=false");  
+  background-repeat:no-repeat; 
+  background-position: center;
+  background-color: #FFFFFF;
+  display: none;
+  width: 0%;
+  height: 300px;
+}
+
+#container-lentes .lente-medio {
+  margin: auto;
+  text-align: center;
+  background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/lente-2.jpg?path_only=false");  
+  background-repeat:no-repeat; 
+  background-position: center;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 150px;
+}
+
+#container-lentes .lente-der {
+ display: none;
+  width: 0%;
+  height: 300px;
+
+}
+
+.button-small{
+  background-color: gray;
+  width: 80%;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+}
+
+@media (min-width: 360px) {
+
+  #container-texto h1{
+  line-height: 40px;
+}
+
+  #auth {
+    padding: 3em 3em 5em;
+  }
+  #left_col {
+    text-align: center;
+  }
+
+   #left_col_promo {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/promo-arriba.jpg?path_only=false");  
+    background-repeat:no-repeat; 
+    background-position: center;
+    background-color: #ffc600;
+    height: 300px;
+  }
+
+  #right_col_promo {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/promo-abajo.jpg?path_only=false");  
+    background-repeat:no-repeat; 
+    background-position: center;
+    background-color: #cf142b;
+    height: 300px;
+  }
+
+
+  #container-lentes .lente-izq {
+  margin: auto;
+  text-align: center;
+  background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/lente-1.jpg?path_only=false");  
+  background-repeat:no-repeat; 
+  background-position: center;
+  background-color: #FFFFFF;
+  display: none;
+   width: 0%;
+  height: 300px;
+}
+
+#container-lentes .lente-medio {
+  margin: auto;
+  text-align: center;
+  background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/lente-2.jpg?path_only=false");  
+  background-repeat:no-repeat; 
+  background-position: center;
+  background-color: #FFFFFF;
+  width: 100%;
+  height: 150px;
+}
+
+#container-lentes .lente-der {
+ display: none;
+  width: 0%;
+  height: 300px;
+
+}
+}
+
+@media (min-width: 550px) {
+  #auth {
+    padding: 3em 3em 5em;
+  }
+  #left_col {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 3em;
+    text-align: center;
+  }
+
+  #right_col {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  #left_col_promo {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/promo-arriba.jpg?path_only=false");  
+    background-repeat:no-repeat; 
+    background-position: center;
+    background-color: #ffc600;
+    height: 400px;
+      -webkit-background-size:100% 100%;
+    -moz-background-size:100% 100%;
+    -o-background-size:70% 70%;
+  }
+
+  #right_col_promo {
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/promo-abajo.jpg?path_only=false");  
+    background-repeat:no-repeat; 
+    background-position: center;
+    background-color: #cf142b;
+    height: 400px;
+      -webkit-background-size:100% 100%;
+    -moz-background-size:100% 100%;
+    -o-background-size:70% 70%;
+  }
+
+
+
+
+#container-lentes .lente-izq {
+  margin: auto;
+  text-align: center;
+  background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/lente-1.jpg?path_only=false");  
+  background-repeat:no-repeat; 
+  background-position: center;
+  background-color: #FFFFFF;
+display: none;
+  width: 0%;
+  height: 300px;
+}
+
+#container-lentes .lente-medio {
+  margin: auto;
+  text-align: center;
+  background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/lente-2.jpg?path_only=false");  
+  background-repeat:no-repeat; 
+  background-position: center;
+  background-color: #FFFFFF;
+
+  width: 100%;
+ 
+}
+
+#container-lentes .lente-der {
+  margin: auto;
+  text-align: center;
+  background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/lente-3.jpg?path_only=false");  
+  background-repeat:no-repeat; 
+  background-position: center;
+  background-color: #FFFFFF;
+  width: 0%;
+  height: 300px;
+  display: none;
+}
+
+  #container-texto {
+
+  min-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+}
+
+@media (min-width: 730px) {
+
+
+#container-texto h1{
+  line-height: 90px;
+}
+
+
+  #auth {
+    display: inline-block;
+    padding: 3em 3em 5em;
+  }
+
+  #left_col {
+    float: left;
+    text-align: left;
+    width: 50%;
+    padding-right: 3em;
+    box-sizing: border-box;
+  }
+
+   #left_col_promo {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    margin: auto;
+    background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/promo-arriba.jpg?path_only=false");  
+    background-repeat:no-repeat; 
+    background-position: center;
+    background-color: #ffc600;
+    height: 300px;
+  }
+
+
+    #right_col {
+    float: left;
+    width: 50%;
+    margin: 0;
+    padding-left: 3em;
+    box-sizing: border-box;
+  }
+
+
+    #right_col_promo {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    margin: auto;
+    background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/promo-abajo.jpg?path_only=false");  
+    background-repeat:no-repeat; 
+    background-position: center;
+    background-color: #cf142b;
+    height: 300px;
+  }
+
+
+#container-lentes h1{
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  color: #cf142b;
+  margin-top: 100px;}
+
+
+#container-lentes .lente-izq {
+  margin-top: 50px;
+  text-align: center;
+  background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/lente-1.jpg?path_only=false");  
+  background-repeat:no-repeat; 
+  background-position: center;
+  background-color: #FFFFFF;
+  float:left;
+ width: 33%;
+  height: 250px;
+  display: inline-block;
+}
+
+#container-lentes .lente-medio {
+  margin-top: 50px;
+  text-align: center;
+  background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/lente-2.jpg?path_only=false");  
+  background-repeat:no-repeat; 
+  background-position: center;
+  background-color: #FFFFFF;
+  float:left;
+  width: 33%;
+  height: 250px;
+  display: inline-block;
+}
+
+#container-lentes .lente-der {
+  margin-top: 50px;
+  text-align: center;
+  background-image: url("https://n129.network-auth.com/CM_Casa_Matriz-w/n/5dXOFdbc/splash/preview/3/054b53032d17418840be555710c5a86f069054d6/lente-3.jpg?path_only=false");  
+  background-repeat:no-repeat; 
+  background-position: center;
+  background-color: #FFFFFF;
+  float:left;
+  width: 33%;
+  height: 250px;
+  display: inline-block;
+}
+
+#container-texto {
+  max-width: 900px;
+  min-width: 300px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  text-align: center;
+  height: 100px;
+}
+
+}
+
+@media (max-width: 400px) {
+  .GoSplash .GoSplash__blockedIcon {
+    height: 6em;
+  }
+
+  .GoSplash .header {
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+  }
+
+  .GoSplash h1 {
+    font-size: 24px;
+  }
+}
+
+
+.GoSplash .header {
+  padding-top: 4em;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.GoSplash #blocked {
+  padding-top: 1em;
+}
+
+.GoSplash .GoSplash__blockedIcon {
+  height: 8em;
+}
+
+.GoSplash .GoSplash__blockedIconLine--primary {
+  fill: #213A44;
+}
+
+.GoSplash .GoSplash__blockedIconLine--accent {
+  fill: #16E4D8;
+}
+
+.GoSplash h1 {
+  font-weight: 300;
+  color: #213A44;
+}
+
+.GoSplash p {
+  color: #666F77;
+}
+
+#container h2 {
+  font-size: 20px;
+}
+
+#container a {
+  margin-bottom: 60px;
+}
+
+/* Estilos Popup  */
+
+.popup {
+  display: none; 
+  position: absolute; 
+  top: 20%; 
+  left: 50%; 
+  width: 500px; 
+  margin-left: 15%; 
+  margin-right: 15%; 
+  padding: 10px; 
+  background: #fff; 
+  opacity: 0.9;
+  color: #333; 
+  font-size: 20px; 
+  line-height: 1.5;
+  padding-bottom: 20%;
+  padding-top: 20%;
+  border: 2px solid #cf142b; 
+  border-radius: 10px;
+  z-index: 9999;
+font-family: 'Lato', helvetica, helvetica neue, verdana, tahoma, sans-serif;
+font-weight: bold;
+}
+
+.popup-mobile {
+  position: absolute; 
+/*  top: 10%; */
+  left: 0; 
+  padding: 5%;
+  margin-left:15%; 
+  margin-right:15%;
+  font-size: 14px;  
+  width: 70%;
+    padding-bottom: 20%;
+  padding-top: 20%;
+  font-weight: bold;
+
+}   
+
+span.emoji {
+  font-size: 40px;
+  vertical-align: middle;
+  line-height: 2;
+}
+.popup-btn-close {
+  position: absolute; 
+  top: 8px; right: 14px; 
+  color:  #cf142b; 
+  font-size: 18px; 
+  font-weight: bold; 
+  text-transform: uppercase;
+  cursor: pointer;} 

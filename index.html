@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv=”Content-Language” content=”es”/>
+
+
+  <title>$MERAKI:NETWORK_NAME$</title>
+
+  <style type="text/css" media="screen">
+    $MERAKI:INLINE_MAIN_CSS$
+    @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
+  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+  <div id="content">
+   
+    <div id="container"><!--  container global -->
+      <div class="header">
+        <div id="icon_cell"><img src="logo-schilling.jpg"></div>
+      </div>
+
+       <!--  Arriba  -->
+        <div id="container-promo_alt2">
+            <img src="arriba-alt2.jpg">
+            <img src="medio-alt2.jpg">
+
+         </div>
+       
+      
+
+
+   
+          <div id="container-form">
+            <h2>Ingresa tus datos para acceder internet</h2>
+            
+               <!-- Falta destino action -->
+            <form action="">
+
+               <div class="fila-formulario">
+                  <div class="col-izq"> <label for="nombre">Nombre:</label></div>
+                  <div class="col-der"><input type="text" name="nombre" value="" placeholder="Nombre" required></div>
+              </div>
+  
+              <div class="fila-formulario">
+                <div class="col-izq"><label for="mail">Mail:</label></div>
+                <div class="col-der"><input type="email" name="lastname" value="" placeholder="nombre@mail.com" required></div>
+              </div>
+
+
+			 <div class="fila-formulario condiciones">
+			 
+			 <p>  <a href="">Ver los términos y condiciones de uso para acceder a la red Wi-Fi de Ópticas Schilling.</a></p>
+              <input class="especial" type="checkbox" name="checkbox" value="checkbox_schilling" required> He leído y acepto las condiciones de uso.
+              </div>
+               <!-- Se agregó clase pop-trigger para jquery -->
+              <div class="fila-boton">
+                <input class="popup-trigger" type="submit" value="Enviar"  >
+
+              </div>
+  
+          </form> 
+
+          <div class="popup">
+ 
+            Bienvenido(a)<br>
+  Ya estás conectado a la red <span style="color:#cf142b">Wi-fi de Ópticas Schilling.</span></br>
+
+             <span class="emoji">🕗</span><br>
+  <span style="font-weight:bolder;color:#cf142b;">Te quedan 30 minutos para navegar!</span>
+  <span class="popup-btn-close">&times;</span>
+</div>
+         </div> <!-- Termino div container-form -->
+     </div> 
+    </div> <!-- Fin container global -->
+ 
+
+  
+
+
+  <div class="footer">
+   <p>Ópticas Schilling &copy; Todos los derechos reservados.</p>
+    </div>  <!-- Fin div  content -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- jQuery Mobile -->
+<script src=”http://u1.linnk.it/qc8sbw/usr/apps/textsync/upload/jquery-mobile-touch.value.js”></script>
+
+<script>
+
+  $("form").on("submit", function(e) {
+  e.preventDefault(); //prevenirsubmit 
+});
+
+// Popup Aviso tiempo conexión WIFI
+
+var scrollTop = "";
+var newHeight = "100";
+
+// scroll ventana
+$(window).on("scroll", function() {
+  scrollTop = $(window).scrollTop();
+  newHeight = scrollTop + 100;
+});
+    
+
+$(".popup-trigger").click(function(e) {
+  e.stopPropagation();
+
+   if ($("input").is(":checked")) {
+  
+  $(".popup").fadeIn( "slow" );
+
+  if($("window").width() < 767) {
+    $(this).after( $( ".popup" ) );
+    $(".popup").show().addClass("popup-mobile");
+    $("html, body").animate({
+      scrollTop: $(".popup").offset().top
+    }, 500);   
+
+  } else {
+    $(".popup").removeClass("popup-mobile").css("top", newHeight).toggle();
+  };}
+});
+  
+//function
+
+$(".popup").click(function(e) {
+  $(".popup").fadeOut("slow");
+  window.location.replace("http://www.opticaschilling.cl/portal/");
+   return false ;
+});
+ 
+$(".popup-btn-close").click(function(e){
+  $(".popup").fadeOut("slow");
+   window.location.replace("http://www.opticaschilling.cl/portal/");
+  return false ;
+});
+ 
+
+</script>
+</body>
+</html>
